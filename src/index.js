@@ -9,6 +9,11 @@ import TodoList from './components/todo-list';
 
 
 const App =() => {
+    const todoData = [
+        {label: 'Drink Coffee', important: false},
+        {label: 'Make Awesome App', important: true},
+        {label: 'Have a lunch', important: false},
+    ];
     const isLoggedIn = true;
     const loginBox =<span>Log in please</span>;
     return (
@@ -16,7 +21,7 @@ const App =() => {
             {isLoggedIn ? null : loginBox }
             <AppHeader />
             <SearchPanel />
-            <TodoList />
+            <TodoList todos={todoData}/>
         </div>
     );
 };
